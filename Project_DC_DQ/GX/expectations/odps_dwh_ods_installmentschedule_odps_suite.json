@@ -1,0 +1,2043 @@
+{
+  "expectations": [
+    {
+      "id": "00a3a6f6-10a8-4060-a126-5c1db4696cd7",
+      "kwargs": {
+        "min_value": 0,
+        "strict_min": true
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "row_count_expectation",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_table_row_count_to_be_between"
+    },
+    {
+      "id": "5ea05838-4c93-4e70-9b8a-ec395897b511",
+      "kwargs": {
+        "min_value": 1.0
+      },
+      "meta": {
+        "dimension": "schema",
+        "name": "column_count_expectation",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_table_column_count_to_be_between"
+    },
+    {
+      "id": "6bfd39de-a550-4fcb-85eb-08d4a1eab2af",
+      "kwargs": {
+        "column_set": [
+          "created_at",
+          "updated_at",
+          "is_deleted",
+          "inserted_date"
+        ],
+        "exact_match": false,
+        "result_format": {
+          "result_format": "COMPLETE"
+        }
+      },
+      "meta": {
+        "dimension": "schema",
+        "name": "mandatory_column_expectation",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_table_columns_to_match_set"
+    },
+    {
+      "id": "30d13045-55be-41b6-adb7-ba3db61faf6f",
+      "kwargs": {
+        "column": "branchid",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "branchid-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "aa05e1a1-f3be-4436-97c6-bbacf59cb44b",
+      "kwargs": {
+        "column": "branchid",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "branchid-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "cac68986-ec4e-4a04-84ad-8d78b775714f",
+      "kwargs": {
+        "column": "applicationid",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "applicationid-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "243343e9-5f66-4897-807e-b3a5d1bd4ab6",
+      "kwargs": {
+        "column": "applicationid",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "applicationid-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "ffd33eba-8b62-4d98-97a7-58dd59bde88d",
+      "kwargs": {
+        "column": "insseqno",
+        "min_value": 0.0,
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "insseqno-ExpectColumnValuesToBeBetween",
+        "severity": "warning"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "db6dc590-4f7e-4940-bcc7-29eb3a9be064",
+      "kwargs": {
+        "column": "insseqno",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "insseqno-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "40388f00-abe8-4663-b30b-1e244e776918",
+      "kwargs": {
+        "column": "duedate",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        },
+        "value_set": [
+          "1970-01-01 00:00:00"
+        ]
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "duedate-ExpectColumnValuesToNotBeInSet",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_in_set"
+    },
+    {
+      "id": "45ac570b-129a-4efb-8fcb-74071ce7eae3",
+      "kwargs": {
+        "column": "duedate",
+        "min_value": "1900-01-02T00:00:00",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "validity",
+        "name": "duedate-ExpectColumnValuesToBeBetween",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "009066bd-d2ed-4923-89fc-3939141fe570",
+      "kwargs": {
+        "column": "installmentamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "installmentamount-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "f7aae26c-8672-42bc-93a8-6d9b85d8950e",
+      "kwargs": {
+        "column": "installmentamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "installmentamount-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "08540499-1d99-4fbe-826e-fa14a8de6f7d",
+      "kwargs": {
+        "column": "paidamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "paidamount-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "9d881e95-a784-490c-90d3-5d9da61f407f",
+      "kwargs": {
+        "column": "paidamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "paidamount-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "81ecee72-551c-498b-9d6c-c592a05e65f5",
+      "kwargs": {
+        "column": "waivedamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "waivedamount-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "da4a2f05-39d2-4cd2-840e-6d0768351ec5",
+      "kwargs": {
+        "column": "waivedamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "waivedamount-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "f75d11e8-691a-4e9f-8c6d-cd4502df3171",
+      "kwargs": {
+        "column": "paiddate",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        },
+        "value_set": [
+          "1970-01-01 00:00:00"
+        ]
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "paiddate-ExpectColumnValuesToNotBeInSet",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_in_set"
+    },
+    {
+      "id": "01157c79-65bc-4401-afdd-2e51d4d4b16a",
+      "kwargs": {
+        "column": "paiddate",
+        "min_value": "1900-01-02T00:00:00",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "validity",
+        "name": "paiddate-ExpectColumnValuesToBeBetween",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "9bbe9c2f-3a06-461e-beff-65da889b46ff",
+      "kwargs": {
+        "column": "latecharges",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "latecharges-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "621ed5af-3286-48cd-acf0-fac0a5c894b3",
+      "kwargs": {
+        "column": "latecharges",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "latecharges-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "c0bd813d-49b2-4719-8d41-7654ca67ba47",
+      "kwargs": {
+        "column": "lcpaid",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "lcpaid-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "78dd4e3a-eb49-4dfb-a7f2-dc69923afe41",
+      "kwargs": {
+        "column": "lcpaid",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "lcpaid-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "6643446d-84a5-4eb0-ba58-0e211b0cb24e",
+      "kwargs": {
+        "column": "lcwaived",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "lcwaived-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "4584b9d9-586f-4183-a7b8-dc6eee52b82d",
+      "kwargs": {
+        "column": "lcwaived",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "lcwaived-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "3afa495e-1d59-4407-a29c-9b85b6ca1fa6",
+      "kwargs": {
+        "column": "waiveddate",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        },
+        "value_set": [
+          "1970-01-01 00:00:00"
+        ]
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "waiveddate-ExpectColumnValuesToNotBeInSet",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_in_set"
+    },
+    {
+      "id": "a9ac6faf-d0b8-4c20-af29-84ac1c5346e5",
+      "kwargs": {
+        "column": "waiveddate",
+        "min_value": "1900-01-02T00:00:00",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "validity",
+        "name": "waiveddate-ExpectColumnValuesToBeBetween",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "06e34a1b-606c-4894-b60c-dd0c31f68b8e",
+      "kwargs": {
+        "column": "principalamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "principalamount-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "bfc4c012-015a-4fca-8cdc-55b4d18e0ba0",
+      "kwargs": {
+        "column": "principalamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "principalamount-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "442ee15f-45ed-4f48-b25a-bfc1864c3991",
+      "kwargs": {
+        "column": "interestamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "interestamount-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "12fb0baf-be93-4d51-9580-1f4d8f6b4393",
+      "kwargs": {
+        "column": "interestamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "interestamount-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "6d8996da-bfba-405a-bcac-03c0fea388cb",
+      "kwargs": {
+        "column": "outstandingprincipal",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "outstandingprincipal-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "5d510843-82d0-41e5-b197-c16a48612892",
+      "kwargs": {
+        "column": "outstandingprincipal",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "outstandingprincipal-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "8b8cbced-243a-44ac-aa01-0c08336811b3",
+      "kwargs": {
+        "column": "outstandinginterest",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "outstandinginterest-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "7e2f2bf9-c9c1-48f4-9e85-2a453c23cd67",
+      "kwargs": {
+        "column": "outstandinginterest",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "outstandinginterest-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "6742620b-7798-4c2e-960d-8c40a8ca0195",
+      "kwargs": {
+        "column": "amountincrecognize",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "amountincrecognize-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "5b8fe544-09aa-40a7-b00f-02f112f18427",
+      "kwargs": {
+        "column": "amountincrecognize",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "amountincrecognize-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "9688ff4f-143b-4122-8685-85e7a918d198",
+      "kwargs": {
+        "column": "lastincrecognize",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        },
+        "value_set": [
+          "1970-01-01 00:00:00"
+        ]
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "lastincrecognize-ExpectColumnValuesToNotBeInSet",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_in_set"
+    },
+    {
+      "id": "bfde461a-d73b-4fac-9124-127789030471",
+      "kwargs": {
+        "column": "lastincrecognize",
+        "min_value": "1900-01-02T00:00:00",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "validity",
+        "name": "lastincrecognize-ExpectColumnValuesToBeBetween",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "0cc04e53-5d9a-4d28-9237-e699b096cfcc",
+      "kwargs": {
+        "column": "discountamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "discountamount-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "3fbfdae7-8f88-4cc8-91b1-45df845ba32d",
+      "kwargs": {
+        "column": "discountamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "discountamount-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "49f712d0-818e-482a-ad3f-2b6d8ff4e6c1",
+      "kwargs": {
+        "column": "fundingcoyportion",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "fundingcoyportion-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "932c7858-8de6-49f2-8b01-d02eb6e9685c",
+      "kwargs": {
+        "column": "fundingcoyportion",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "fundingcoyportion-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "ca872946-d686-4c67-b7c1-a5ca3cebe36c",
+      "kwargs": {
+        "column": "insuranceincomeamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "insuranceincomeamount-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "84dcfd71-5d05-4b64-ad83-e9dc36a469d6",
+      "kwargs": {
+        "column": "insuranceincomeamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "insuranceincomeamount-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "3bb7344d-e838-4e64-968b-55fb170e1492",
+      "kwargs": {
+        "column": "outstandinginsuranceincomeamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "outstandinginsuranceincomeamount-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "f82fe3a7-6d12-45e6-8f96-135a3f443276",
+      "kwargs": {
+        "column": "outstandinginsuranceincomeamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "outstandinginsuranceincomeamount-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "3537e3a3-bbc7-48f4-bae3-09ad1ca3df0d",
+      "kwargs": {
+        "column": "insuranceincomerecognize",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "insuranceincomerecognize-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "28a7f9b1-a2f1-49ae-8000-e41bf5485332",
+      "kwargs": {
+        "column": "insuranceincomerecognize",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "insuranceincomerecognize-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "1b21c518-b665-4559-9aec-240b07d0cfd1",
+      "kwargs": {
+        "column": "diffrateamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "diffrateamount-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "e34461c1-c23d-461b-b005-126d0c3c8047",
+      "kwargs": {
+        "column": "diffrateamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "diffrateamount-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "6e58ced1-c0a9-4b88-a05c-0f9563436b6c",
+      "kwargs": {
+        "column": "outstandingdiffrateamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "outstandingdiffrateamount-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "ffcc24f7-f12a-45f8-84a3-96b8e9e79e45",
+      "kwargs": {
+        "column": "outstandingdiffrateamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "outstandingdiffrateamount-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "88aaf58a-752d-49ff-a0b2-4ad155bf7b07",
+      "kwargs": {
+        "column": "diffraterecognize",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "diffraterecognize-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "c921ed67-aa22-4abe-ade4-420c91887d95",
+      "kwargs": {
+        "column": "diffraterecognize",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "diffraterecognize-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "5f1566e2-20ae-45ae-b78e-c33e0c7e4e1a",
+      "kwargs": {
+        "column": "spreadamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "spreadamount-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "18722063-8164-404e-8d0f-f562e8e0b4f4",
+      "kwargs": {
+        "column": "spreadamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "spreadamount-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "18b01c0c-5db7-4c30-be91-672b9f10dc7c",
+      "kwargs": {
+        "column": "spreadrecognize",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "spreadrecognize-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "d680c5fd-1dce-4470-ac5a-e6e450004c5c",
+      "kwargs": {
+        "column": "spreadrecognize",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "spreadrecognize-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "847b8b11-1155-4d87-b74d-5a922bd60fb2",
+      "kwargs": {
+        "column": "lastspreadrecognize",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        },
+        "value_set": [
+          "1970-01-01 00:00:00"
+        ]
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "lastspreadrecognize-ExpectColumnValuesToNotBeInSet",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_in_set"
+    },
+    {
+      "id": "f319227c-7b71-4e5d-989f-080d61a88be4",
+      "kwargs": {
+        "column": "lastspreadrecognize",
+        "min_value": "1900-01-02T00:00:00",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "validity",
+        "name": "lastspreadrecognize-ExpectColumnValuesToBeBetween",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "3eb8610a-0515-4650-8747-dc7692510759",
+      "kwargs": {
+        "column": "islcadminfee",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        },
+        "value_set": [
+          true,
+          false
+        ]
+      },
+      "meta": {
+        "dimension": "validity",
+        "name": "islcadminfee-ExpectColumnValuesToBeInSet",
+        "severity": "warning"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "f1a1463f-c275-47b8-a1bf-a71df1690274",
+      "kwargs": {
+        "column": "issmssent",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "issmssent-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "15e18bfb-2b95-40e4-9f89-cfdacf1469c4",
+      "kwargs": {
+        "column": "issmssent",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "issmssent-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "5ad391fe-7b7b-41d5-bd7d-211385ff63bf",
+      "kwargs": {
+        "column": "usrupd",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "usrupd-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "2e663534-8d3e-44d3-946f-6ca4d25d633e",
+      "kwargs": {
+        "column": "usrupd",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "usrupd-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "6e95cd86-4123-4f68-af06-9123c5441aad",
+      "kwargs": {
+        "column": "dtmupd",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        },
+        "value_set": [
+          "1970-01-01 00:00:00"
+        ]
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "dtmupd-ExpectColumnValuesToNotBeInSet",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_in_set"
+    },
+    {
+      "id": "7da7daee-733a-45ce-b49f-0d8ae1e01a67",
+      "kwargs": {
+        "column": "dtmupd",
+        "min_value": "1900-01-02T00:00:00",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "validity",
+        "name": "dtmupd-ExpectColumnValuesToBeBetween",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "09fe311f-1db1-4b07-ac32-43a23288ccd9",
+      "kwargs": {
+        "column": "deferredinsurincamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "deferredinsurincamount-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "dc920cac-93b2-4d43-9840-32b83ce5d3d7",
+      "kwargs": {
+        "column": "deferredinsurincamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "deferredinsurincamount-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "610e2567-f65e-4ab8-af17-9f36f62d042a",
+      "kwargs": {
+        "column": "outstandingdeferredinsurincamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "outstandingdeferredinsurincamount-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "6b423fef-1571-47dc-9747-99000227105b",
+      "kwargs": {
+        "column": "outstandingdeferredinsurincamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "outstandingdeferredinsurincamount-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "468e8e29-1ba1-463a-bfe6-2d89517f0d45",
+      "kwargs": {
+        "column": "deferredinsurincrecognize",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "deferredinsurincrecognize-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "75f8a08b-b9a0-45ac-832c-2473676c6084",
+      "kwargs": {
+        "column": "deferredinsurincrecognize",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "deferredinsurincrecognize-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "1722c927-5da4-4ecf-8108-19af12dc5aae",
+      "kwargs": {
+        "column": "otherrefundamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "otherrefundamount-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "0b398516-dc00-41d5-9c4e-16f7a8d12136",
+      "kwargs": {
+        "column": "otherrefundamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "otherrefundamount-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "dc4b142d-9866-4b75-b9ba-d968322c60d3",
+      "kwargs": {
+        "column": "outstandingotherrefundamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "outstandingotherrefundamount-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "a4fe8cc7-d507-46f1-8ddb-93fce7b6e135",
+      "kwargs": {
+        "column": "outstandingotherrefundamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "outstandingotherrefundamount-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "9b57f3f2-99e7-4db5-a599-056179081f4b",
+      "kwargs": {
+        "column": "otherrefundrecognize",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "otherrefundrecognize-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "079b6151-3422-44f3-9e9d-78132025c094",
+      "kwargs": {
+        "column": "otherrefundrecognize",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "otherrefundrecognize-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "4a83c9a1-2d29-4144-8862-0b08bc45642b",
+      "kwargs": {
+        "column": "adminfeeamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "adminfeeamount-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "7ae96a56-47f7-415f-b2af-fd4c20442dcd",
+      "kwargs": {
+        "column": "adminfeeamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "adminfeeamount-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "24a292ea-ed7b-48f2-9658-d73fd8f0a52f",
+      "kwargs": {
+        "column": "outstandingadminfeeamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "outstandingadminfeeamount-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "07de44cd-c600-43cf-9a20-ef5a33db7a46",
+      "kwargs": {
+        "column": "outstandingadminfeeamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "outstandingadminfeeamount-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "13684385-2760-4904-bd78-81c1dbb9dae3",
+      "kwargs": {
+        "column": "adminfeerecognize",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "adminfeerecognize-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "8e089c59-171f-451a-967c-8b63629a3e13",
+      "kwargs": {
+        "column": "adminfeerecognize",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "adminfeerecognize-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "a8eec52c-b00b-4db4-a8d3-5ffc782109a6",
+      "kwargs": {
+        "column": "provisionfeeamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "provisionfeeamount-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "2625896d-153a-42ef-a5fc-fd135a1af88f",
+      "kwargs": {
+        "column": "provisionfeeamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "provisionfeeamount-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "d3ba5374-7385-4c21-a17f-802d4f1892c3",
+      "kwargs": {
+        "column": "outstandingprovisionfeeamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "outstandingprovisionfeeamount-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "36f123b7-279c-4467-befc-13822976380c",
+      "kwargs": {
+        "column": "outstandingprovisionfeeamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "outstandingprovisionfeeamount-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "67e25af2-60f1-4927-9d3f-73faa01395e6",
+      "kwargs": {
+        "column": "provisionfeerecognize",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "provisionfeerecognize-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "abf0c069-575d-4b21-85a6-7f1c1b91ad52",
+      "kwargs": {
+        "column": "provisionfeerecognize",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "provisionfeerecognize-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "4bd297f5-3016-49ec-aa73-a01ef13af88f",
+      "kwargs": {
+        "column": "otherfeeamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "otherfeeamount-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "28896360-34d0-4ac5-b2b2-7e1749a2ca87",
+      "kwargs": {
+        "column": "otherfeeamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "otherfeeamount-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "d135ff7e-27a0-440d-ae40-2a0ce9cbe87f",
+      "kwargs": {
+        "column": "outstandingotherfeeamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "outstandingotherfeeamount-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "04d2c389-7e6b-41ea-9cdd-a5c6e6ca490a",
+      "kwargs": {
+        "column": "outstandingotherfeeamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "outstandingotherfeeamount-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "26fdeebc-cba5-45db-9d99-68a4e81a6345",
+      "kwargs": {
+        "column": "otherfeerecognize",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "otherfeerecognize-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "8a02c58f-2fdf-46b5-b9a5-c4501a46ffdb",
+      "kwargs": {
+        "column": "otherfeerecognize",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "otherfeerecognize-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "d949d850-24cf-4212-a24b-372e05f82848",
+      "kwargs": {
+        "column": "surveyfeeamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "surveyfeeamount-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "84f4e028-b714-424b-8209-f4af57c07a7e",
+      "kwargs": {
+        "column": "surveyfeeamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "surveyfeeamount-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "57cd4163-0ab4-4e6f-acc2-5f1103d8a96a",
+      "kwargs": {
+        "column": "outstandingsurveyfeeamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "outstandingsurveyfeeamount-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "29817771-bd98-4d86-a43b-10fcfb4ca813",
+      "kwargs": {
+        "column": "outstandingsurveyfeeamount",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "outstandingsurveyfeeamount-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "5f5e35f4-400f-4342-bbf4-cf53e08e87e8",
+      "kwargs": {
+        "column": "surveyfeerecognize",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "surveyfeerecognize-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "f719e513-acd8-4f67-9dfa-4c68004e9f1c",
+      "kwargs": {
+        "column": "surveyfeerecognize",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "surveyfeerecognize-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "b707b91e-fefd-4f8e-ac91-cffac892c17b",
+      "kwargs": {
+        "column": "incomenet",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "incomenet-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "857ad67d-def6-4af6-a5a2-8df38e3ee8be",
+      "kwargs": {
+        "column": "incomenet",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "incomenet-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "605712ae-7a3b-4226-810d-dae1687c5f85",
+      "kwargs": {
+        "column": "osprinciplenet",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "osprinciplenet-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "1417917d-2381-485b-a316-6d51fcf93125",
+      "kwargs": {
+        "column": "osprinciplenet",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "osprinciplenet-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "374326e5-cb01-4d5b-b028-773d7cee0c7c",
+      "kwargs": {
+        "column": "grossyieldacct",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "grossyieldacct-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "9ff9904c-494f-4bd0-9071-62564209ec8f",
+      "kwargs": {
+        "column": "grossyieldacct",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "grossyieldacct-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "44de3384-d389-472c-a377-1fa960a60b13",
+      "kwargs": {
+        "column": "principalamountincrecognize",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "principalamountincrecognize-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "2e59ed26-745c-4df6-9e40-71eb27d790b6",
+      "kwargs": {
+        "column": "principalamountincrecognize",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "principalamountincrecognize-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "d6e2da14-3e7e-4df8-a611-f94748848c48",
+      "kwargs": {
+        "column": "deferredsalessupport",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "deferredsalessupport-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "31fdcac2-9796-41f3-b4a5-86119558ca7b",
+      "kwargs": {
+        "column": "deferredsalessupport",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "deferredsalessupport-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "7da6d770-569e-407a-8845-c66a0bbc129d",
+      "kwargs": {
+        "column": "osdeferredsalessupport",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "osdeferredsalessupport-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "fdbb4835-446f-4af0-ae97-4499e7366b68",
+      "kwargs": {
+        "column": "osdeferredsalessupport",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "osdeferredsalessupport-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "3e89903a-5e73-4eb9-94e5-99ba04eba9cc",
+      "kwargs": {
+        "column": "deferedsalessupportrecognize",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "correctness",
+        "name": "deferedsalessupportrecognize-ExpectColumnValuesToNotHaveDoubleSpace",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_have_double_space"
+    },
+    {
+      "id": "28da890f-4ac4-48a9-a14f-05e5604bf124",
+      "kwargs": {
+        "column": "deferedsalessupportrecognize",
+        "result_format": {
+          "result_format": "COMPLETE",
+          "return_unexpected_rows": true
+        }
+      },
+      "meta": {
+        "dimension": "completeness",
+        "name": "deferedsalessupportrecognize-ExpectColumnValuesToNotBeNull",
+        "severity": "critical"
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    }
+  ],
+  "id": "75b82586-626f-40d7-8347-00600804cb5b",
+  "meta": {
+    "great_expectations_version": "1.12.3"
+  },
+  "name": "odps_dwh_ods_installmentschedule_odps_suite",
+  "notes": null
+}
