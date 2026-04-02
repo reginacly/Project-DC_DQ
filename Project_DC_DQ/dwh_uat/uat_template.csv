@@ -1,0 +1,2 @@
+source_stage;target_stage;source_schema;target_schema;holo_table_name;pk
+dwh;holo;;;ro_tele_collateral;
