@@ -482,7 +482,7 @@ def print_result(results: list[ExpectationValidationResult]):
 #         "text": message_text
 #     }
 
-#     webhook_url = "https://hooks.slack.com/services/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"
+#     webhook_url = ""
 
 #     response = requests.post(
 #         url=webhook_url,
